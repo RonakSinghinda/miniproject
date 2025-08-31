@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI SmartShop - Intelligent E-Commerce</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <i class="fas fa-brain"></i>
+                <span>AI SmartShop</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#ai-features" class="nav-link">AI Features</a>
+                <a href="#about" class="nav-link">About</a>
+            </div>
+            <div class="nav-actions">
+                <button class="search-btn" onclick="toggleSearch()">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="cart-btn" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-bar" id="searchBar">
+        <input type="text" placeholder="Search products with AI..." id="searchInput">
+        <button onclick="aiSearch()">
+            <i class="fas fa-magic"></i> AI Search
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome to AI SmartShop</h1>
+            <p>Experience the future of shopping with AI-powered recommendations, dynamic pricing, and personalized experiences.</p>
+            <button class="cta-btn" onclick="scrollToProducts()">Explore Products</button>
+        </div>
+        <div class="hero-visual">
+            <div class="ai-animation">
+                <i class="fas fa-robot"></i>
+                <div class="pulse"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Features Section -->
+    <section class="ai-features" id="ai-features">
+        <h2>AI-Powered Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Smart Recommendations</h3>
+                <p>Get personalized product suggestions based on your preferences and behavior.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Dynamic Pricing</h3>
+                <p>Real-time price optimization based on demand, competition, and market trends.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-comments"></i>
+                <h3>Sentiment Analysis</h3>
+                <p>AI analyzes customer reviews and feedback to improve product quality.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-users"></i>
+                <h3>Customer Segmentation</h3>
+                <p>Intelligent grouping of customers for targeted marketing campaigns.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <h2>Featured Products</h2>
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be loaded dynamically -->
+        </div>
+        <div class="ai-recommendations">
+            <h3>AI Recommendations for You</h3>
+            <div class="recommendations-grid" id="recommendationsGrid">
+                <!-- AI recommendations will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be loaded here -->
+        </div>
+        <div class="cart-total">
+            <div class="total-line">
+                <span>Subtotal:</span>
+                <span id="cartSubtotal">$0.00</span>
+            </div>
+            <div class="total-line">
+                <span>AI Discount:</span>
+                <span id="aiDiscount">-$0.00</span>
+            </div>
+            <div class="total-line total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2>About AI SmartShop</h2>
+            <p>We leverage cutting-edge artificial intelligence to revolutionize your shopping experience. Our platform uses machine learning algorithms to provide personalized recommendations, optimize pricing, and enhance customer engagement.</p>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">95%</span>
+                    <span class="stat-label">Customer Satisfaction</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">40%</span>
+                    <span class="stat-label">Higher Conversion</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">AI Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>AI SmartShop</h4>
+                <p>Revolutionizing e-commerce with artificial intelligence.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a href="#ai-features">AI Features</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: info@aismartshop.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AI SmartShop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
